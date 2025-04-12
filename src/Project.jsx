@@ -5,12 +5,14 @@ const projets = [
       "Outil pour générer automatiquement des propositions de menus équilibrés pour la semaine avec des idées gourmandes et diversifiées. La fonctionnalité a été développée avec une interface Javascript, le design avec le logiciel Figma et la structure avec HTML/CSS.",
     github: "https://github.com/Hyzeuline/machine-a-menu",
     URL: "https://machine-a-menu.vercel.app/",
+    id: 1,
   },
   {
     name: "Une école en Php & MySQL",
     description:
       "Simulation de l'ensemble des données d'un établissement scolaire représentant son organisation globale via une base de données MySQL et une interface Php.",
     github: "https://github.com/Hyzeuline/php",
+    id: 2,
   },
 ];
 
@@ -18,10 +20,10 @@ export function Projects() {
   return (
     <div className="Project">
       <h2>Mes projets</h2>
-      <p>
+      <div>
         {projets.map((projet) => {
           return (
-            <div>
+            <div key={projet.id}>
               <h2>{projet.name}</h2>
               <p>{projet.description}</p>
               {projet.URL !== undefined && (
@@ -35,7 +37,7 @@ export function Projects() {
             </div>
           );
         })}
-      </p>
+      </div>
     </div>
   );
 }

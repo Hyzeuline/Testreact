@@ -4,6 +4,7 @@ import { Apropos } from "./Apropos";
 import { Projects } from "./Project";
 import { Formation } from "./Formation";
 import { Contact } from "./Contact";
+import { Dogs } from "./Dogs";
 
 export function App() {
   return (
@@ -20,6 +21,7 @@ export function App() {
         github="Iseline Voison"
         linkedin="Iseline voison"
       />
+      <Dogs />
     </>
   );
 }
